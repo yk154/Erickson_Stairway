@@ -13,7 +13,7 @@ body {
 }
 
 .next-btn {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Tomorrow', sans-serif;
 }
 
 /* Custom page header */
@@ -23,7 +23,7 @@ body {
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Tomorrow', sans-serif;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
