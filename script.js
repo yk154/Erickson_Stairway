@@ -2,7 +2,7 @@
 var i = 0;
 var score = 0; //total score
 var form = document.getElementById('quizForm');
-var nextBtn = document.getElementById('startBtn');
+var startBtn = document.getElementById('startBtn');
 var nextBtn = document.getElementById('nextBtn');
 var endBtn = document.getElementById('endBtn');
 
