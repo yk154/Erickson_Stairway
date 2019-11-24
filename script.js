@@ -44,7 +44,8 @@ function showQuestion(question, choices) {
 		div.setAttribute('style', 'display: block');
 		const option = document.createElement('input');
 		option.setAttribute('type', 'radio');
-		option.setAttribute('value', idx);
+		option.setAttribute('name', 'stage')
+		option.setAttribute('value', choice[1]);
 		const label = document.createElement('label');
 		label.innerHTML = choice[0];
 		label.setAttribute('style', 'margin-left: 10px');
