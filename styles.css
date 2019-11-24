@@ -46,7 +46,10 @@ body {
   margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
+#hidden-div {
+  display: none
+}
+
 .jumbotron {
   font-family: 'Zilla Slab', serif;
   text-align: center;
@@ -57,6 +60,7 @@ body {
   padding: 8px 16px;
   font-size: 21px;
 }
+
 
 /* Supporting marketing content */
 .marketing {

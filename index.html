@@ -7,7 +7,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Erickson's Stairway</title>
-	<link rel="icon" href="../../favicon.ico">
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
@@ -28,38 +27,40 @@
 					So I want to look back on our memories. Will you start the journey with me?
 				</p>
 			</div>
+
+
+			<!-- Form for the questions -->
+			<section id = "hidden-div">
+				<form name="quizForm" onsubmit="return submitAnswers()">
+					<h4 id = "hidden-question"></h4>
+					<input class="radioJ" type="radio" name="q1" value="a"> a. <br>
+					<input class="radioJ" type="radio" name="q1" value="b"> b. <br>
+					<input class="radioJ" type="radio" name="q1" value="c"> c. <br>
+					<input class="radioJ" type="radio" name="q1" value="d"> d. <br><br>
+				</form>
+			</section>
+
+
 			<div class="next-btn">
 				<!-- <p><a class="btn btn-lg btn-warning" href="#" role="button">Next</a></p> -->
-				<button type="button" class="btn btn-warning btn-lg btn-block">Next</button>
+				<button type="button" class="btn btn-warning btn-lg btn-block" id = "startBtn" onclick= "initialize()" >Start</button>
+				<button type="button" class="btn btn-warning btn-lg btn-block" id = "nextBtn" onclick= "nextQuestion()" style="display: none" >Next</button>
+				<button type="button" class="btn btn-warning btn-lg btn-block" id = "endBtn" onclick= "endGame()" style="display: none" >Submit</button>
 				<br>
 			</div>
 		
 
-			<!-- Form for the questions -->
-			<!-- <section>
-				<div id="results"></div>
-				<form name="quizForm" onsubmit="return submitAnswers()">
-					<label>1. In which HTML elements do we put in JavaScript code?</label>
-					<br>
-					answer: b. script -->
-					<!-- <input class="radioJ" type="radio" name="q1" value="a"> a. &lt;js&gt;<br>
-					<input class="radioJ" type="radio" name="q1" value="b"> b. &lt;script&gt;<br>
-					<input class="radioJ" type="radio" name="q1" value="c"> c. &lt;body&gt;<br>
-					<input class="radioJ" type="radio" name="q1" value="d"> d. &lt;head&gt;<br><br>
-				</form>
-			</section> -->
-
 			<footer class="footer">
-						<p>&copy; 2019 Educational Psychology | Amy, Bo, John</p>
-						<p>
-							This game is based on Erik Erikson’s 8 stages of psychological development. <br>
-							1) Trust vs. Mistrust <br> 2) Autonomy vs. Shame <br> 3) Initiative vs. Guilt <br> 4) Industry vs. Inferiority <br> 5) Identity vs. Role Confusion <br> 6) Intimacy vs. Isolation <br> 7) Generativity vs. Stagnation <br> a8) Integrity vs. Despair <br>
-							Assumption: Users will show consistent attitudes throughout their lives in game.
-						</p>
-      		</footer>
+				<p>&copy; 2019 Educational Psychology | Amy, Bo, John</p>
+				<p>
+					This game is based on Erik Erikson’s 8 stages of psychological development. <br>
+					1) Trust vs. Mistrust <br> 2) Autonomy vs. Shame <br> 3) Initiative vs. Guilt <br> 4) Industry vs. Inferiority <br> 5) Identity vs. Role Confusion <br> 6) Intimacy vs. Isolation <br> 7) Generativity vs. Stagnation <br> a8) Integrity vs. Despair <br>
+					Assumption: Users will show consistent attitudes throughout their lives in game.
+				</p>
+			</footer>
 
 		</div> <!-- container -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 	</body>
 	</html>
