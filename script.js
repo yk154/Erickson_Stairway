@@ -45,9 +45,9 @@ function showQuestion(question, choices) {
 		const option = document.createElement('input');
 		option.setAttribute('type', 'radio');
 		option.setAttribute('name', 'stage')
-		option.setAttribute('value', choice[1]);
+		option.setAttribute('value', choice[1]); //choice[1] -- question point
 		const label = document.createElement('label');
-		label.innerHTML = choice[0];
+		label.innerHTML = choice[0]; //choice[0] -- question text
 		label.setAttribute('style', 'margin-left: 10px');
 		div.appendChild(option);
 		div.appendChild(label);
@@ -68,6 +68,7 @@ function endGame () {
 // }
 
 
+//JSON DATA
 let data = 
 [
   {
