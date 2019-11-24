@@ -47,7 +47,7 @@ body {
 }
 
 #hidden-div {
-  display: none;
+  /* display: none; */
   font-family: 'Tomorrow', sans-serif;
 }
 
@@ -61,7 +61,6 @@ body {
   padding: 8px 16px;
   font-size: 21px;
 }
-
 
 /* Supporting marketing content */
 .marketing {

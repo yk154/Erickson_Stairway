@@ -1,8 +1,7 @@
 //Global variables
 var i = 0;
 var score = 0; //total score
-var question = document.getElementById('hidden-question');
-var form = document.getElementById('hidden-div');
+var form = document.getElementById('quizForm');
 var nextBtn = document.getElementById('startBtn');
 var nextBtn = document.getElementById('nextBtn');
 var endBtn = document.getElementById('endBtn');
@@ -18,23 +17,41 @@ function initialize() {
 function nextQuestion() {
 	var q = data[i].question;
 	var choices = Object.values(data[i].choices);
-	var num = i+1;
-	question.innerHTML = num + ". " + q
 
-	choices.forEach(([choice, point], num) => { // min choice is b and max choice is E
-		console.log(choice, point, num);
-
-
-	})
-		
-
-	console.log(choices)
+	console.log(q, choices);
+	showQuestion(q, choices);
 
 	i++;
 
 	if (i == 29) {
 		endGame();
 	}
+}
+
+function showQuestion(question, choices) {
+	var child = form.lastElementChild;  
+	while (child) { 
+			form.removeChild(child); 
+			child = form.lastElementChild; 
+	} 
+
+	const q = document.createElement('h4');
+	q.innerHTML = question;
+	form.appendChild(q)
+
+	choices.forEach((choice, idx) => {
+		const div = document.createElement('div');
+		div.setAttribute('style', 'display: block');
+		const option = document.createElement('input');
+		option.setAttribute('type', 'radio');
+		option.setAttribute('value', idx);
+		const label = document.createElement('label');
+		label.innerHTML = choice[0];
+		label.setAttribute('style', 'margin-left: 10px');
+		div.appendChild(option);
+		div.appendChild(label);
+		form.appendChild(div);
+	});
 }
 
 function endGame () {
