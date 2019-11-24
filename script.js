@@ -1,3 +1,4 @@
+//Global variables
 var i = 0;
 var score = 0; //total score
 var question = document.getElementById('hidden-question');
@@ -20,8 +21,10 @@ function nextQuestion() {
 	var num = i+1;
 	question.innerHTML = num + ". " + q
 
-	choices.forEach(([choice, point], num) => {
+	choices.forEach(([choice, point], num) => { // min choice is b and max choice is E
 		console.log(choice, point, num);
+
+
 	})
 		
 
@@ -32,12 +35,13 @@ function nextQuestion() {
 	if (i == 29) {
 		endGame();
 	}
-	// totalScore();
 }
 
 function endGame () {
 	nextBtn.style.display = 'none';
 	endBtn.style.display = 'block';
+
+	// totalScore();
 }
 
 // function totalScore() {

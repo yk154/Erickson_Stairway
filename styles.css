@@ -47,7 +47,8 @@ body {
 }
 
 #hidden-div {
-  display: none
+  display: none;
+  font-family: 'Tomorrow', sans-serif;
 }
 
 .jumbotron {
