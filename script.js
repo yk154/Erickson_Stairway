@@ -5,6 +5,7 @@ var form = document.getElementById('quizForm');
 var startBtn = document.getElementById('startBtn');
 var nextBtn = document.getElementById('nextBtn');
 var endBtn = document.getElementById('endBtn');
+var image = document.getElementById('image');
 
 function initialize() {
 	form.style.display = 'block';
@@ -19,13 +20,30 @@ function nextQuestion() {
 	var choices = Object.values(data[i].choices);
 
 	console.log(q, choices);
-	showQuestion(q, choices);
+  showQuestion(q, choices);
+  showImage(i+1, 600, 280);
 
 	i++;
 
 	if (i == 29) {
 		endGame();
 	}
+}
+
+function showImage(src, width, height){
+  var child = image.lastElementChild;  
+	while (child) { 
+			image.removeChild(child); 
+			child = image.lastElementChild; 
+  } 
+  
+  var img = document.createElement("img");
+  img.src = "assets/"+src+".jpg";
+  img.width = width;
+  img.height = height;
+
+  // document.body.appendChild(img);
+  image.appendChild(img);
 }
 
 function showQuestion(question, choices) {
@@ -68,7 +86,7 @@ function endGame () {
 // }
 
 
-//JSON DATA
+///JSON DATA
 let data = 
 [
   {
