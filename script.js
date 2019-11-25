@@ -21,7 +21,7 @@ function nextQuestion() {
 
 	console.log(q, choices);
   showQuestion(q, choices);
-  showImage(i+1, 600, 280);
+  showImage(i+1);
 
 	i++;
 
@@ -30,7 +30,7 @@ function nextQuestion() {
 	}
 }
 
-function showImage(src, width, height){
+function showImage(src){
   var child = image.lastElementChild;  
 	while (child) { 
 			image.removeChild(child); 
@@ -39,9 +39,10 @@ function showImage(src, width, height){
   
   var img = document.createElement("img");
   img.src = "assets/"+src+".jpg";
-  img.width = width;
-  img.height = height;
+  img.setAttribute('style', 'width: 100%; height: 100%');
+  img.style.display= 'block'
 
+  // img.setAttribute('style', 'display: block');
   // document.body.appendChild(img);
   image.appendChild(img);
 }
