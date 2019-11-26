@@ -92,7 +92,7 @@ let data =
 [
   {
     "question": "Look! You are crying and a little baby. Your mom is washing dishes.",
-    "imgSrc": "",
+    "imgSrc": "[신생아 분수토] 당황하지 마세요! 아벤트가 알려주는 신생아 분수토의 원인 및 대처법. (n.d.). Retrieved from https://m.blog.naver.com/PostView.nhn?blogId=philipsavent&logNo=220756230632&proxyReferer=https://www.google.com/.",
     "choices": {
       "choiceA": [
         "Mom will first finish washing dishes.",
@@ -115,7 +115,7 @@ let data =
   },
   {
     "question": "Your parents are watching the Super Bowl! Oh, you are about to cry.",
-    "imgSrc": "",
+    "imgSrc": "Ellis, K. (2018, July 10). Super Bowl Sunday. Retrieved from https://www.sheknows.com/health-and-wellness/articles/822983/how-to-enjoy-the-super-bowl-with-your-man/.",
     "choices": {
       "choiceA": [
         "They will watch super bowl with you.",
@@ -134,7 +134,7 @@ let data =
   },
   {
     "question": "Your parents have an argument. And you suddenly start to cry.",
-    "imgSrc": "",
+    "imgSrc": "Avoid the Unhappy and Unlucky. (2016, December 13). Retrieved from https://lefuturistedailynews.com/2016/12/13/avoid-the-unhappy-and-unlucky/.",
     "choices": {
       "choiceA": [
         "Parents will stop the argument and look after you.",
@@ -149,7 +149,7 @@ let data =
   },
   {
     "question": "You are about to cry. Who is around you?",
-    "imgSrc": "",
+    "imgSrc": "B., E. (2018, February 1). Cosa fare se il neonato fatica ad accettare il seno. Retrieved from https://www.maternita.it/cosa-fare-se-il-neonato-fatica-ad-accettare-il-seno.html.",
     "choices": {
       "choiceA": [
         "Caregivers",
@@ -164,7 +164,7 @@ let data =
   },
   {
     "question": "You are now a toddler. You want to go outside and play at the playground with parents. What does your parent say?",
-    "imgSrc": "",
+    "imgSrc": "Depositphotos, Inc. (n.d.). Zabawy dzieci z rodzicami na odkrytym placu zabaw. Retrieved from https://pl.depositphotos.com/100226976/stock-photo-playful-child-with-parents-at.html.",
     "choices": {
       "choiceA": [
         "NO! Too dangerous.",
@@ -183,7 +183,7 @@ let data =
   },
   {
     "question": "What is your food preference?",
-    "imgSrc": "",
+    "imgSrc": "someone giving food 이미지. (n.d.). Retrieved from https://www.shutterstock.com/ko/search/someone giving food.",
     "choices": {
       "choiceA": [
         "Beef",
@@ -202,7 +202,7 @@ let data =
   },
   {
     "question": "Which toys do you want to play with?",
-    "imgSrc": "",
+    "imgSrc": "Lock, C. (2019, October 18). The 10 Best Toys to Buy 10-Month-Olds in 2019. Retrieved from https://www.verywellfamily.com/best-toys-for-10-month-olds-4169818.",
     "choices": {
       "choiceA": [
         "Doll",
@@ -221,7 +221,7 @@ let data =
   },
   {
     "question": "Did you master toilet training?",
-    "imgSrc": "",
+    "imgSrc": "When to Start Toilet Training: Is My Child Ready for It? (2018, June 26). Retrieved from https://childrensmd.org/browse-by-age-group/toddler-pre-school/toilet-training/.",
     "choices": {
       "choiceA": [
         "Yes",
@@ -236,7 +236,7 @@ let data =
   },
   {
     "question": "You made a mud pie for your mom and she was not happy that I got mud all over my pants.",
-    "imgSrc": "",
+    "imgSrc": "Savchenko, M. (2019, August 31). Desenvolvimento do bebê aos 8 meses: o que vai acontecer. Retrieved from https://flo.health/pt/ser-mae/criar-um-bebe/cuidados-e-alimentacao-dos-bebes/desenvolvimento-do-bebe-aos-8-meses.",
     "choices": {
       "choiceA": [
         "I will not make her another one.",
@@ -251,7 +251,7 @@ let data =
   },
   {
     "question": "You made a paper windmill for Dad and it made him happy.",
-    "imgSrc": "",
+    "imgSrc": "GmbH, F. R. S. (n.d.). Girl / Relaxing / Lying: HD Stock Video 121-707-129: Framepool & RightSmith Stock Footage. Retrieved from http://footage.framepool.com/en/shot/121707129-rehabilitation-infirmary-granddaughter-grandmother.",
     "choices": {
       "choiceA": [
         "I will make him another one.",
@@ -266,7 +266,7 @@ let data =
   },
   {
     "question": "You made a paper flower for your friend and it made him/her happy.",
-		"imgSrc": "",
+		"imgSrc": "Admin. (2019, September 23). Israeli Preschool Ordered Closed After Segregating Ethiopian Children. Retrieved from https://www.branapress.com/2019/09/23/israeli-preschool-ordered-closed-after-segregating-ethiopian-children/.",
 		"choices": {
 			"choiceA": [
 				"Make another paper flower for her.",
@@ -281,7 +281,7 @@ let data =
   },
   {
     "question": "You were with mom, and found a hungry dog.",
-    "imgSrc": "",
+    "imgSrc": "귀여운 외로운 강아지 강아지 pug 슬픈 및 검은 소파에 앉아 누군가 기다려야합니다. (n.d.). Retrieved from https://kr.123rf.com/photo_53884638_귀여운-외로운-강아지-강아지-pug-슬픈-및-검은-소파에-앉아-누군가-기다려야합니다-.html.",
     "choices": {
       "choiceA": [
         "I feel guilty, so I’ll ask my mom if we could feed him/her.",
@@ -296,7 +296,7 @@ let data =
   },
   {
     "question": "Yeah! You are now at school! Where are you at school in terms of academic achievement?",
-    "imgSrc": "",
+    "imgSrc": "Desk, I. T. W. (2019, April 3). Bihar Board Class 10 Result 2019: Check declaration date, steps to check. Retrieved from https://www.indiatoday.in/education-today/notification/story/bihar-board-class-10-result-2019-check-declaration-date-steps-to-check-1492784-2019-04-03.",
     "choices": {
       "choiceA": [
         "Bottom 10%",
@@ -323,7 +323,7 @@ let data =
   },
   {
     "question": "What did you do when you struggled with your homework?",
-    "imgSrc": "",
+    "imgSrc": "Tisch, A. R. (2019, October 16). Dear Struggling Student: An Open Letter. Retrieved from https://www.theodysseyonline.com/dear-struggling-students.",
     "choices": {
       "choiceA": [
         "I always asked for help from people around me: teachers, parents, friends… everyone can help me!",
@@ -338,7 +338,7 @@ let data =
   },
   {
     "question": "How did the people around you respond when you ask for help?",
-    "imgSrc": "",
+    "imgSrc": "Macaroni Kid - Find Your Family Fun. (n.d.). Retrieved from https://loveland.macaronikid.com/articles/5b6f9feb4b17331f951d041d.",
     "choices": {
       "choiceA": [
         "They always explained in detail and praised me for asking questions.",
@@ -357,7 +357,7 @@ let data =
   },
   {
     "question": "Today was the final poster presentation day! What did everyone say?",
-    "imgSrc": "",
+    "imgSrc": "NOS Classroom Resources Case Study: Holme Valley Primary School. (2019, March 4). Retrieved from https://nationalonlinesafety.com/testimonials/holme-valley-primary-school/.",
     "choices": {
       "choiceA": [
         "My poster was one of the most popular ones. The poster that I made will be presented in the school hallway!",
@@ -376,7 +376,7 @@ let data =
   },
   {
     "question": "You took an exam. How did you do and what did your parents say?",
-    "imgSrc": "",
+    "imgSrc": "Tribune News Service. (2019, March 3). 'Arrived' late, 3 students not allowed to sit in CBSE exam. Retrieved from https://www.tribuneindia.com/news/bathinda/-arrived-late-3-students-not-allowed-to-sit-in-cbse-exam/737263.html.",
     "choices": {
       "choiceA": [
         "I did very well! My parents praised me a lot :)",
@@ -399,7 +399,7 @@ let data =
   },
   {
     "question": "You know how to make yourself happy.",
-    "imgSrc": "",
+    "imgSrc": "Kovtun, D. (2018, June 18). Happy excited woman celebrating victory. Retrieved from https://www.dreamstime.com/stock-video-happy-excited-woman-celebrating-victory-happy-excited-woman-celebrating-victory-joyful-mature-business-woman-clenching-her-fists-video119114578.",
     "choices": {
       "choiceA": [
         "Of course! If I don’t know myself, then who? I have my go-tos",
@@ -418,7 +418,7 @@ let data =
   },
   {
     "question": "When I tried to do new things, my parents….",
-    "imgSrc": "",
+    "imgSrc": "ArtsEdge, K. C. (n.d.). The Kennedy Center: ARTSEDGE - the National Arts and Education Network. Retrieved from https://artsedge.kennedy-center.org/students/features/field-guides/dance-performance.",
     "choices": {
       "choiceA": [
         "Always encouraged me to explore! They said I can only learn what I want to do by trying different things.",
@@ -433,7 +433,7 @@ let data =
   },
   {
     "question": "Did you know what you wanted to be in the future at that time?",
-    "imgSrc": "",
+    "imgSrc": "girl future career images. (n.d.). Retrieved from https://www.shutterstock.com/search/girl future career.",
     "choices": {
       "choiceA": [
         "Hell yeah!! I was so passionate about it.",
@@ -452,7 +452,7 @@ let data =
   },
   {
     "question": "Are you happy with your outfit for school tomorrow?",
-    "imgSrc": "",
+    "imgSrc": "(n.d.). Retrieved from http://cakningkak.com/set/?url=krumiro.info/mens-walk-in-closet/themed-closet-design-mens-walk-in-best-designs-for-men/.",
     "choices": {
       "choiceA": [
         "Yesss. You know what? I have my own style and I love it.",
@@ -471,7 +471,7 @@ let data =
   },
   {
     "question": "In social situations, you were the person who…",
-    "imgSrc": "",
+    "imgSrc": "When God comes to us do we even notice? (2018, July 30). Retrieved from https://leadership101.blog/2018/07/30/when-god-comes-to-us-do-we-even-notice/.",
     "choices": {
       "choiceA": [
         "Loved to mingle with others",
@@ -486,7 +486,7 @@ let data =
   },
   {
     "question": "You had an argument with a friend you knew from high school. You were considering whether you should go talk to him/her.",
-    "imgSrc": "",
+    "imgSrc": "Fostering Student Learning through the Use of Debates. (2017, September 8). Retrieved from https://www.facultyfocus.com/articles/course-design-ideas/fostering-student-learning-through-the-use-of-debates/.",
     "choices": {
       "choiceA": [
         "He was the one who got my nerves first. Why should I?",
@@ -505,7 +505,7 @@ let data =
   },
   {
     "question": "You got your first job near my hometown and have been working for a month. You would like to be familiar with co-workers, but you had no idea what to do.",
-    "imgSrc": "",
+    "imgSrc": "[영어발음연습] that-these-those 신기한 th 약 발음 현상.!! (n.d.). Retrieved from http://blog.naver.com/PostView.nhn?blogId=megaeagel9523&logNo=220490787715.",
     "choices": {
       "choiceA": [
         "Yeah, I could ask them to come over to my house and have dinner together.",
@@ -528,7 +528,7 @@ let data =
   },
   {
     "question": "You found someone you fell in love with. You have a crush on him/her. What should you do? Should I ask for a date?",
-    "imgSrc": "",
+    "imgSrc": "The 'love at first sight' myth - Renato Cardoso´s Blog. (n.d.). Retrieved from https://blogs.universal.org/renatocardoso/en/2016/01/03/the-love-at-first-sight-myth/.",
     "choices": {
       "choiceA": [
         "Yes",
@@ -543,7 +543,7 @@ let data =
   },
   {
     "question": "You married a person you met from a workplace. You and your spouse went on a  honeymoon. During the flight, he/she tells you that you and him/her would be the happiest partner ever. Your reaction was:",
-    "imgSrc": "",
+    "imgSrc": "27 Best Zakir Khan images in 2019: Hindi quotes, Poetry hindi, Poetry quotes. (2019, June 7). Retrieved from https://www.pinterest.com/Vicibabu/zakir-khan/.",
     "choices": {
       "choiceA": [
         "For sure.",
@@ -558,7 +558,7 @@ let data =
   },
   {
     "question": "You became a senior staff in your workplace. A newbie just got in recently, but he seems a bit clumsy and feels stressed about his work life.",
-    "imgSrc": "",
+    "imgSrc": "Admin. (2016, May 24). A Newbie's Guide to Managing Interns. Retrieved from https://www.mediabistro.com/employer/blog/best-practices/a-newbies-guide-to-managing-interns/.",
     "choices": {
       "choiceA": [
         "Buys him a drink and hear the hardships he went through in the workplace.",
@@ -577,7 +577,7 @@ let data =
   },
   {
     "question": "Your son/daughter came to ask you about his/her innocent, somewhat unrealistic dream. He/She reminds of your childhood when you used to picture yourself to a hero who changes the world. You said….",
-    "imgSrc": "",
+    "imgSrc": "Hopper, E. (2018, August 20). An Introduction to Rogerian Therapy. Retrieved from https://www.thoughtco.com/rogerian-therapy-4171932.",
     "choices": {
       "choiceA": [
         "Be realistic kiddo. Don’t act like a child and be mature, or else you’ll fall behind.",
@@ -596,7 +596,7 @@ let data =
   },
   {
     "question": "Last choice. Looking back on what you have done in your life, you ponder over who you were and what you’ll become. Your thought was...",
-    "imgSrc": "",
+    "imgSrc": "Meir, D. (2017, June 22). A Day in the Life. Retrieved from https://www.acmscalgary.com/single-post/2017/05/24/A-Day-in-the-Life.",
     "choices": {
       "choiceA": [
         "I wish I could go back to days when I was little. I wanna start over…",
