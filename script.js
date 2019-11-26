@@ -1,11 +1,19 @@
 //Global variables
-var i = 0;
-var score = 0; //total score
-var form = document.getElementById('quizForm');
-var startBtn = document.getElementById('startBtn');
-var nextBtn = document.getElementById('nextBtn');
-var endBtn = document.getElementById('endBtn');
-var image = document.getElementById('image');
+let i = 0;
+let score = 0;
+let totalScore = 0;
+let firstStage = 0;
+let secondStage = 0;
+let thirdStage = 0;
+let fourthStage = 0;
+let fifthStage = 0;
+let sixthStage = 0;
+let seventhStage = 0;
+const form = document.getElementById('quizForm');
+const startBtn = document.getElementById('startBtn');
+const nextBtn = document.getElementById('nextBtn');
+const endBtn = document.getElementById('endBtn');
+const image = document.getElementById('image');
 
 function initialize() {
 	form.style.display = 'block';
@@ -16,31 +24,37 @@ function initialize() {
 }
 
 function nextQuestion() {
-	var q = data[i].question;
-	var choices = Object.values(data[i].choices);
+	const q = data[i].question;
+	const choices = Object.values(data[i].choices);
+
+	if (i !== 0) {
+	  console.log("number", i);
+	  calculateScore(i - 1);
+  }
 
 	console.log(q, choices);
   showQuestion(q, choices);
   showImage(i+1);
 
-	i++;
+  i++;
 
-	if (i == 29) {
+	if (i === 29) {
+	  totalScore = firstStage + secondStage + thirdStage + fourthStage + fifthStage + sixthStage + seventhStage;
 		endGame();
 	}
 }
 
 function showImage(src){
-  var child = image.lastElementChild;  
+  let child = image.lastElementChild;
 	while (child) { 
 			image.removeChild(child); 
 			child = image.lastElementChild; 
   } 
   
-  var img = document.createElement("img");
+  const img = document.createElement("img");
   img.src = "assets/"+src+".jpg";
   img.setAttribute('style', 'width: 100%; height: 100%');
-  img.style.display= 'block'
+  img.style.display= 'block';
 
   // img.setAttribute('style', 'display: block');
   // document.body.appendChild(img);
@@ -48,44 +62,79 @@ function showImage(src){
 }
 
 function showQuestion(question, choices) {
-	var child = form.lastElementChild;  
+  let child = form.lastElementChild;
 	while (child) { 
 			form.removeChild(child); 
 			child = form.lastElementChild; 
-	} 
+	}
 
 	const q = document.createElement('h4');
 	q.innerHTML = question;
-	form.appendChild(q)
+	form.appendChild(q);
+
+	let div = null;
+	let option = null;
+	let label = null;
 
 	choices.forEach((choice, idx) => {
-		const div = document.createElement('div');
+		div = document.createElement('div');
 		div.setAttribute('style', 'display: block');
-		const option = document.createElement('input');
+		option = document.createElement('input');
+		option.setAttribute('id', idx);
 		option.setAttribute('type', 'radio');
-		option.setAttribute('name', 'stage')
+		option.setAttribute('name', 'stage');
 		option.setAttribute('value', choice[1]); //choice[1] -- question point
-		const label = document.createElement('label');
+		label = document.createElement('label');
 		label.innerHTML = choice[0]; //choice[0] -- question text
 		label.setAttribute('style', 'margin-left: 10px');
 		div.appendChild(option);
 		div.appendChild(label);
 		form.appendChild(div);
+    document.getElementById(idx).addEventListener('click', () => clicked(idx));
 	});
 }
 
-function endGame () {
+function endGame() {
 	nextBtn.style.display = 'none';
 	endBtn.style.display = 'block';
 
 	// totalScore();
 }
 
-// function totalScore() {
+function clicked(idx) {
+  const id = document.getElementById(idx);
+  score = id.getAttribute("value");
+}
 
-// 	//점수 계산 코드 짜기
-// }
+function calculateScore(i) {
+  switch (true) {
+    case (i <= 3):
+      firstStage += +score;
+      break;
+    case (i > 3 && i <= 7):
+      secondStage += +score;
+      break;
+    case (i > 7 && i <= 11):
+      thirdStage += +score;
+      break;
+    case (i > 11 && i <= 16):
+      fourthStage += +score;
+      break;
+    case (i > 16 && i <= 20):
+      fifthStage += +score;
+      break;
+    case (i > 20 && i <= 24):
+      sixthStage += +score;
+      break;
+    case (i > 24 && i <= 28):
+      seventhStage += +score;
+      break;
+    default:
+      break;
+  }
 
+  score = 0;
+}
 
 ///JSON DATA
 let data = 
@@ -613,4 +662,58 @@ let data =
     },
     "stage": "Generativity vs. Stagnation"
   }
-]
+];
+
+/*
+first query = totalScore > 165?
+second query = first + second + third > 65?
+third query = fourth + fifth > 55?
+fourth query = sixth + seventh > 45?
+ */
+
+let endings = [
+  {
+    "threshold": 165,
+    "pos": "achieving a sense of integrity for what you have accomplished.",
+    "neg": "falling into despair due to disappointments and nonfulfillments in your life."
+
+  },
+  {
+    "threshold": 65,
+    "pos": "your caregivers tried their best to show immediate and consistent responses to your needs. With their faith, you were able to develop a sense of personal independence and control over yourselves. They also encouraged you to confidently and independently choose your preferences.",
+    "neg": "your caregivers failed to show immediate and consistent responses to your needs. Their strict surveillance made you doubt in your own abilities, not to mention that you were not able to learn independence and that you feared to make choices as you grow up.",
+  },
+  {
+    "threshold": 55,
+    "pos": "you have been highly praised for your accomplishments. You also explored a lot of different interests from hobbies to religion, and you were able to successfully recognize your identity and became confident about yourself.",
+    "neg": "you have not been praised enough for your accomplishments. You grew to feel inferior about your abilities and became less likely to engage in new tasks in the future. You either did not experience different enough interests or were afraid of exploring them.",
+  },
+  {
+    "threshold": 45,
+    "pos": "you were able to build an intimate relationship with people at college or in your workplace. You also succeeded in guiding future generations and bringing positivity in society.",
+    "neg": "you were isolated as you locked up yourself into your own space. You became a person who prioritized yourself the most. You ended up regretting what you have done in your life.",
+  },
+];
+
+let endingTemplate = [
+  {
+    "order": 0,
+    "context": "To my understanding, you have been",
+  },
+  {
+    "order": 1,
+    "context": "When you were a little baby, ",
+  },
+  {
+    "order": 2,
+    "context": "When you were a teenager, ",
+  },
+  {
+    "order": 3,
+    "context": "When you became an adult, ",
+  },
+  {
+    "order": 4,
+    "context": "What do YOU think about your life - was it meaningful to you?",
+  },
+];

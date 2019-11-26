@@ -1,4 +1,4 @@
-# Erickson_Stairway
+# Erikson_Stairway
 This game is based on Erik Erikson’s 8 stages of psychological development.
  1) Trust vs. Mistrust 
  2) Autonomy vs. Shame 
