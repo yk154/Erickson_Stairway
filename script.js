@@ -57,6 +57,11 @@ function showImage(src){
   // img.setAttribute('style', 'display: block');
   // document.body.appendChild(img);
   image.appendChild(img);
+
+  const citation = document.createElement("p");
+  citation.innerHTML = data[i].imgSrc;
+  citation.id = "citation"
+  image.appendChild(citation);
 }
 
 function showQuestion(question, choices) {
