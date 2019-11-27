@@ -16,6 +16,7 @@
 			<h3 class="text-muted" align='right'>Erikson's Stairway</h3>
 		</div>
 
+
 		<div id = "image" class="jumbotron">
 				<img src="assets/bear.png" alt= "bear" width = "200" height="280" align="left">
 				<p>
@@ -32,22 +33,23 @@
 		</div>
 
 
-			<!-- Form for the questions -->
-			<section id = "hidden-div">
-				<form id="quizForm" onsubmit="return submitAnswers()">
-				</form>
-			</section>
+			<div id = "stages">
+				<!-- Form for the questions -->
+				<section id = "hidden-div">
+					<form id="quizForm" onsubmit="return submitAnswers()">
+					</form>
+				</section>
 
 
-			<div class="next-btn">
-				<!-- <p><a class="btn btn-lg btn-warning" href="#" role="button">Next</a></p> -->
-				<button type="button" class="btn btn-warning btn-lg btn-block" id = "startBtn" onclick= "initialize()" >Start</button>
-				<button type="button" class="btn btn-warning btn-lg btn-block" id = "nextBtn" onclick= "nextQuestion()" style="display: none" >Next</button>
-				<button type="button" class="btn btn-warning btn-lg btn-block" id = "endBtn" onclick= "displayResult()" style="display: none" >Submit</button>
-				<br>
+				<div class="next-btn">
+					<!-- <p><a class="btn btn-lg btn-warning" href="#" role="button">Next</a></p> -->
+					<button type="button" class="btn btn-warning btn-lg btn-block" id = "startBtn" onclick= "initialize()" >Start</button>
+					<button type="button" class="btn btn-warning btn-lg btn-block" id = "nextBtn" onclick= "nextQuestion()" style="display: none" >Next</button>
+					<button type="button" class="btn btn-warning btn-lg btn-block" id = "endBtn" onclick= "displayResult()" style="display: none" >Submit</button>
+					<br>
+				</div>
+			
 			</div>
-		
-
 			<footer class="footer">
 				
 				<p>&copy; 2019 Educational Psychology | Amy, Bo, John</p>

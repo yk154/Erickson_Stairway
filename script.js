@@ -42,12 +42,16 @@ function nextQuestion() {
 	}
 }
 
-function showImage(src){
+function removeChild() {
   let child = image.lastElementChild;
 	while (child) { 
 			image.removeChild(child); 
 			child = image.lastElementChild; 
   } 
+}
+
+function showImage(src){
+  removeChild();
   
   const img = document.createElement("img");
   img.src = "assets/"+src+".jpg";
@@ -106,6 +110,31 @@ function displayResult() {
   calculateScore(i - 1);
   totalScore = firstStage + secondStage + thirdStage + fourthStage + fifthStage + sixthStage + seventhStage;
   console.log(totalScore);
+
+  let child = document.getElementById("stages");
+  child.style.display = "none";
+  removeChild();
+
+  const endingStory = document.createElement("p");
+
+  for (var ith = 0; ith < endingTemplate.length - 1; ith++) {
+    console.log(endings[ith])
+    if(totalScore > endings[ith].threshold) {
+      endingStory.innerHTML += endingTemplate[ith].context + " " + endings[ith].pos + " ";
+    } else { endingStory.innerHTML += endingTemplate[ith].context + " " + endings[ith].neg + " "; }
+  }
+
+  endingStory.innerHTML += endingTemplate[endingTemplate.length - 1].context;
+
+  const img = document.createElement("img");
+  img.src = "assets/bear.png"
+  img.width = '200';
+  img.height = '280';
+  img.align = 'left';
+
+  document.getElementById("image").appendChild(img);
+  document.getElementById("image").appendChild(endingStory);
+
 }
 
 function clicked(idx) {
@@ -152,6 +181,63 @@ function calculateScore(i) {
 }
 
 ///JSON DATA
+
+
+
+/*
+first query = totalScore > 165?
+second query = first + second + third > 65?
+third query = fourth + fifth > 55?
+fourth query = sixth + seventh > 45?
+ */
+
+let endings = [
+  {
+    "threshold": 165,
+    "pos": "achieving a sense of integrity for what you have accomplished.",
+    "neg": "falling into despair due to disappointments and nonfulfillments in your life."
+  },
+  {
+    "threshold": 65,
+    "pos": "your caregivers tried their best to show immediate and consistent responses to your needs. With their faith, you were able to develop a sense of personal independence and control over yourselves. They also encouraged you to confidently and independently choose your preferences.",
+    "neg": "your caregivers failed to show immediate and consistent responses to your needs. Their strict surveillance made you doubt in your own abilities, not to mention that you were not able to learn independence and that you feared to make choices as you grow up.",
+  },
+  {
+    "threshold": 55,
+    "pos": "you have been highly praised for your accomplishments. You also explored a lot of different interests from hobbies to religion, and you were able to successfully recognize your identity and became confident about yourself.",
+    "neg": "you have not been praised enough for your accomplishments. You grew to feel inferior about your abilities and became less likely to engage in new tasks in the future. You either did not experience different enough interests or were afraid of exploring them.",
+  },
+  {
+    "threshold": 45,
+    "pos": "you were able to build an intimate relationship with people at college or in your workplace. You also succeeded in guiding future generations and bringing positivity in society.",
+    "neg": "you were isolated as you locked up yourself into your own space. You became a person who prioritized yourself the most. You ended up regretting what you have done in your life.",
+  },
+];
+
+let endingTemplate = [
+  {
+    "order": 0,
+    "context": "To my understanding, you have been",
+  },
+  {
+    "order": 1,
+    "context": "When you were a little baby, ",
+  },
+  {
+    "order": 2,
+    "context": "When you were a teenager, ",
+  },
+  {
+    "order": 3,
+    "context": "When you became an adult, ",
+  },
+  {
+    "order": 4,
+    "context": "What do YOU think about your life - was it meaningful to you?",
+  },
+];
+
+
 let data = 
 [
   {
@@ -677,58 +763,4 @@ let data =
     },
     "stage": "Generativity vs. Stagnation"
   }
-];
-
-/*
-first query = totalScore > 165?
-second query = first + second + third > 65?
-third query = fourth + fifth > 55?
-fourth query = sixth + seventh > 45?
- */
-
-let endings = [
-  {
-    "threshold": 165,
-    "pos": "achieving a sense of integrity for what you have accomplished.",
-    "neg": "falling into despair due to disappointments and nonfulfillments in your life."
-
-  },
-  {
-    "threshold": 65,
-    "pos": "your caregivers tried their best to show immediate and consistent responses to your needs. With their faith, you were able to develop a sense of personal independence and control over yourselves. They also encouraged you to confidently and independently choose your preferences.",
-    "neg": "your caregivers failed to show immediate and consistent responses to your needs. Their strict surveillance made you doubt in your own abilities, not to mention that you were not able to learn independence and that you feared to make choices as you grow up.",
-  },
-  {
-    "threshold": 55,
-    "pos": "you have been highly praised for your accomplishments. You also explored a lot of different interests from hobbies to religion, and you were able to successfully recognize your identity and became confident about yourself.",
-    "neg": "you have not been praised enough for your accomplishments. You grew to feel inferior about your abilities and became less likely to engage in new tasks in the future. You either did not experience different enough interests or were afraid of exploring them.",
-  },
-  {
-    "threshold": 45,
-    "pos": "you were able to build an intimate relationship with people at college or in your workplace. You also succeeded in guiding future generations and bringing positivity in society.",
-    "neg": "you were isolated as you locked up yourself into your own space. You became a person who prioritized yourself the most. You ended up regretting what you have done in your life.",
-  },
-];
-
-let endingTemplate = [
-  {
-    "order": 0,
-    "context": "To my understanding, you have been",
-  },
-  {
-    "order": 1,
-    "context": "When you were a little baby, ",
-  },
-  {
-    "order": 2,
-    "context": "When you were a teenager, ",
-  },
-  {
-    "order": 3,
-    "context": "When you became an adult, ",
-  },
-  {
-    "order": 4,
-    "context": "What do YOU think about your life - was it meaningful to you?",
-  },
 ];
