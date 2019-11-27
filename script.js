@@ -36,7 +36,7 @@ function nextQuestion() {
 
   i++;
 
-  console.log(i)
+  console.log('i', i);
 	if (i === 29) {
 		endGame();
 	}
@@ -98,37 +98,46 @@ function endGame() {
 }
 
 function displayResult() {
-    totalScore = firstStage + secondStage + thirdStage + fourthStage + fifthStage + sixthStage + seventhStage;
-    console.log(totalScore)
+  calculateScore(i - 1);
+  totalScore = firstStage + secondStage + thirdStage + fourthStage + fifthStage + sixthStage + seventhStage;
+  console.log(totalScore);
 }
 
 function clicked(idx) {
   const id = document.getElementById(idx);
   score = id.getAttribute("value");
+  console.log('score', score);
 }
 
 function calculateScore(i) {
   switch (true) {
     case (i <= 3):
       firstStage += +score;
+      console.log("firstStage", firstStage);
       break;
     case (i > 3 && i <= 7):
       secondStage += +score;
+      console.log("secondStage", secondStage);
       break;
     case (i > 7 && i <= 11):
       thirdStage += +score;
+      console.log("thirdStage", thirdStage);
       break;
     case (i > 11 && i <= 16):
       fourthStage += +score;
+      console.log("fourthStage", fourthStage);
       break;
     case (i > 16 && i <= 20):
       fifthStage += +score;
+      console.log("fifthStage", fifthStage);
       break;
     case (i > 20 && i <= 24):
       sixthStage += +score;
+      console.log("sixthStage", sixthStage);
       break;
     case (i > 24 && i <= 30):
       seventhStage += +score;
+      console.log("seventhStage", seventhStage);
       break;
     default:
       break;
