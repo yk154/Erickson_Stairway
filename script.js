@@ -28,18 +28,16 @@ function nextQuestion() {
 	const choices = Object.values(data[i].choices);
 
 	if (i !== 0) {
-	  console.log("number", i);
 	  calculateScore(i - 1);
   }
 
-	console.log(q, choices);
   showQuestion(q, choices);
   showImage(i+1);
 
   i++;
 
+  console.log(i)
 	if (i === 29) {
-	  totalScore = firstStage + secondStage + thirdStage + fourthStage + fifthStage + sixthStage + seventhStage;
 		endGame();
 	}
 }
@@ -96,9 +94,12 @@ function showQuestion(question, choices) {
 
 function endGame() {
 	nextBtn.style.display = 'none';
-	endBtn.style.display = 'block';
+  endBtn.style.display = 'block';
+}
 
-	// totalScore();
+function displayResult() {
+    totalScore = firstStage + secondStage + thirdStage + fourthStage + fifthStage + sixthStage + seventhStage;
+    console.log(totalScore)
 }
 
 function clicked(idx) {
@@ -126,7 +127,7 @@ function calculateScore(i) {
     case (i > 20 && i <= 24):
       sixthStage += +score;
       break;
-    case (i > 24 && i <= 28):
+    case (i > 24 && i <= 30):
       seventhStage += +score;
       break;
     default:
